@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.header-container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /* Semi Bold */
+    font-size: 20px;
+}
+
+.header {
+    
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y user-options */
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    position: relative;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+}
+
+.header .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espaciado entre los elementos */
+}
+
+.header .nav-links li {
+    display: inline-block;
+}
+
+.header .nav-links a {
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header .nav-links a.active {
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+}
+
+/* Estilos para LOG IN y CEST alineados a la derecha */
+.user-options {
+    display: flex;
+    gap: 40px; /* Espaciado entre LOG IN y CEST */
+}
+
+.user-options a {
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+}
+
+.cart-icon {
+    width: 20px;
+    height: auto;
+    
+}
+
+.user-options a .fa-shopping-cart {
+    font-size: 22px;
+    color: #000000;
+}

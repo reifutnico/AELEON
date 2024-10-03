@@ -1,0 +1,77 @@
+/* src/components/Sidebar/Sidebar.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@600&display=swap');
+
+
+.sidebar {
+    position: fixed;
+    top: 85px; /* Ajusta este valor según la altura de tu header */
+    right: -500px; /* Ocultar inicialmente */
+    width: 500px;
+    height: calc(100% - 85px); /* Ajustar la altura para que no tape el header */
+    background-color: #ffffff;
+    transition: right 0.3s ease; /* Cambia left a right */
+    z-index: 1000;
+    border: 1px solid black; /* Agregar un borde negro */
+}
+.sidebar.open {
+    right: 0; /* Desplegar el menú */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    padding: 10px 30px; /* Reducir el padding para acercar los enlaces */
+    text-align: left;
+}
+
+.sidebar-nav a {
+    color: rgb(119, 119, 119);
+    font-family: 'Poppins', serif; 
+    font-weight: 700;
+    font-size: 20px; /* Tamaño de la fuente */
+
+    text-decoration: none;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    left: -80px; /* Coloca el botón fuera del área visible a la izquierda */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid white; /* Línea divisoria */
+}
+
+.sidebar-title {
+    font-size: 24px; /* Ajusta según tu preferencia */
+    color: rgb(0, 0, 0); /* Color de la sección WOMEN */
+    font-family: 'Poppins', sans-serif; /* Aplica Poppins a los enlaces */
+
+    margin: 0; /* Sin márgenes */
+}
+
+.sidebar-logo {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+}
+
+.sidebar-new {
+    padding: 30px;
+
+}
+
+.new-label {
+    font-weight: 700;
+    padding: 0px;
+    color: rgb(255, 0, 0); /* Color del texto de NEW */
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+}

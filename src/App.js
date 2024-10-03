@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/pages/home';
+import Header from './components/layouts/header';
+import Sidebar from './components/Sidebar/sidebar';
+
+const App = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [categoryNumber, setCategoryNumber] = useState(null);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(true);
+  };
+  const handleCategoryChange = (number) => {
+    setCategoryNumber(number); 
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header toggleSidebar={toggleSidebar} numberCategory={handleCategoryChange} />
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar}  numberCategory={categoryNumber}/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
