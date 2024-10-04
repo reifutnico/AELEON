@@ -13,6 +13,11 @@ const App = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(true);
   };
+
+  const toggleSidebarHome = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   const handleCategoryChange = (number) => {
     setCategoryNumber(number); 
   };
@@ -21,7 +26,7 @@ const App = () => {
       <Header toggleSidebar={toggleSidebar} numberCategory={handleCategoryChange} />
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar}  numberCategory={categoryNumber}/>
       <Routes>
-        <Route path="/" element={<Home categoryNumber={categoryNumber}/>} />
+        <Route path="/" element={<Home categoryNumber={categoryNumber} toggleSidebarHome={toggleSidebarHome}/>} />
       </Routes>
     </Router>
   );

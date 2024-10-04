@@ -6,7 +6,7 @@ import womenVideo from '../../videos/WOMEN_MODELS_VIDEOS.mp4';
 import kidsVideo from '../../videos/KIDS_MODELS_VIDEOS.mp4';
 import defaultVideo from '../../videos/DEFAULT_MODELS_VIDEOS.mp4';
 
-const Home = ({ categoryNumber }) => {
+const Home = ({ categoryNumber, toggleSidebarHome }) => {
   const [currentVideo, setCurrentVideo] = useState(defaultVideo);
   const [nextVideo, setNextVideo] = useState(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -48,8 +48,12 @@ const Home = ({ categoryNumber }) => {
     setNextVideo(null);
   };
 
+  const handleClick = () => {
+    toggleSidebarHome(); // Cierra el sidebar al hacer clic en cualquier lugar del componente Home
+  };
+
   return (
-    <div className="home-container">
+    <div className="home-container" onClick={handleClick}>
       <video
         key={currentVideo}
         className={`background-video ${isTransitioning ? 'fading-out' : ''}`}
@@ -71,9 +75,8 @@ const Home = ({ categoryNumber }) => {
           onLoadedData={handleNextVideoLoad}
         />
       )}
-      <div className="category-display">
-        {/* Contenido de la categoría */}
-      </div>
+      <div className="category-display"></div>
+      <button className="explore-button">Explore the collection</button>
     </div>
   );
 };
