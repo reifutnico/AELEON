@@ -33,10 +33,8 @@ const Home = ({ categoryNumber, toggleSidebarHome }) => {
       setIsTransitioning(true);
     }
 
-    // Prevent scrolling
     document.body.style.overflow = 'hidden';
 
-    // Cleanup function to re-enable scrolling when component unmounts
     return () => {
       document.body.style.overflow = 'visible';
     };
@@ -49,7 +47,7 @@ const Home = ({ categoryNumber, toggleSidebarHome }) => {
   };
 
   const handleClick = () => {
-    toggleSidebarHome(); // Cierra el sidebar al hacer clic en cualquier lugar del componente Home
+    toggleSidebarHome();  // Close the sidebar and reset the selected option
   };
 
   return (

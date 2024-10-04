@@ -1,36 +1,30 @@
-// src/components/Header/Header.js
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/header.css';  
 import logo from '../../img/LOGO_AELEON.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-const Header = ({ toggleSidebar,numberCategory }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const navigate = useNavigate();
+const Header = ({ toggleSidebar, numberCategory, selectedOption }) => {
 
   const handleSelect = (value) => {
-    setSelectedOption(value);
-    console.log(`Selected: ${value}`);
-    toggleSidebar(); 
-    numberCategory(value)
+    numberCategory(value);
+    toggleSidebar();
   };
 
   return (
     <div className="header-container">
       <header className="header">
         <div className="logo">
-        <Link to="/">
-        <img src={logo} alt="Logo" />
-        </Link>
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
         <nav>
           <ul className="nav-links">
             <li>
               <a 
-                href="#" 
+                href="#"
                 onClick={() => handleSelect(1)} 
                 className={selectedOption === 1 ? 'active' : ''}
               >
@@ -57,7 +51,6 @@ const Header = ({ toggleSidebar,numberCategory }) => {
             </li>
           </ul>
         </nav>
-        
         <div className="user-options">
           <a href="#" className="login">LOG IN</a>
           <a href="#">
