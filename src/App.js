@@ -9,7 +9,7 @@ import Sidebar from './components/Sidebar/sidebar';
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [categoryNumber, setCategoryNumber] = useState(null);
-  const [selectedOption, setSelectedOption] = useState(null); // Track selected option
+  const [selectedOption, setSelectedOption] = useState(null); 
 
   const toggleSidebar = () => {
     setIsSidebarOpen(true);
@@ -17,12 +17,12 @@ const App = () => {
 
   const toggleSidebarHome = () => {
     setIsSidebarOpen(false);
-    setSelectedOption(null);  // Reset the selected option when sidebar closes
+    setSelectedOption(null);  
   };
 
   const handleCategoryChange = (number) => {
     setCategoryNumber(number);
-    setSelectedOption(number); // Update the selected option when a category is selected
+    setSelectedOption(number);
   };
 
   return (
