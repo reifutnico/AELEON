@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './components/pages/home';
 import Header from './components/layouts/header';
@@ -30,6 +30,15 @@ const App = () => {
   const location = useLocation(); 
 
   const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
+
+  // Efecto para cerrar el sidebar al ir a /login o /register
+  useEffect(() => {
+    if (isAuthPage) {
+      setIsSidebarOpen(false); // Cerrar el sidebar
+      setSelectedOption(null);  
+
+    }
+  }, [location.pathname]); // Dependencia en la ruta
 
   return (
     <>

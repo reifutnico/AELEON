@@ -65,7 +65,7 @@ const Register = () => {
         </div>
 
         <div className="register-section">
-          <p>DO YOU ALREADY HAVE AN ACCOUNT?</p>
+          <p>¿DO YOU ALREADY HAVE AN ACCOUNT?</p>
           <Link to="/login" className="register-link">
           <button className="register-button">LOG IN</button>
           </Link>

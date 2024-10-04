@@ -45,11 +45,11 @@ const Login = () => {
             <button type="submit" className="login-button">LOG IN</button>
           </form>
           
-          <a href="#" className="forgot-password">Have you forgotten your password?</a>
+          <a href="#" className="forgot-password">¿Have you forgotten your password?</a>
         </div>
         
         <div className="register-section">
-          <p>DO YOU NEED AN ACCOUNT?</p>
+          <p>¿DO YOU NEED AN ACCOUNT?</p>
           <Link to="/register" className="register-link">
           <button className="register-button">REGISTER</button>
         </Link>
