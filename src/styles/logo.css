@@ -1,0 +1,13 @@
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Centra el logo verticalmente */
+    height: 85px; /* Igual a la altura del header para mantener la posición */
+    padding: 5px 10%; /* Igual a la del header */
+  }
+  
+  .logo {
+    height: 70px; /* Altura del logo */
+    width: auto; /* Mantiene la relación de aspecto */
+  }
+  

@@ -1,10 +1,12 @@
 import './App.css';
 import React, { useState } from 'react';
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './components/pages/home';
 import Header from './components/layouts/header';
+import Logo from './components/layouts/logo'; // Importa el nuevo logo
 import Sidebar from './components/Sidebar/sidebar';
+import Login from './components/pages/login';
+import Register from './components/pages/register';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -25,15 +27,31 @@ const App = () => {
     setSelectedOption(number);
   };
 
+  const location = useLocation(); 
+
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
+
   return (
-    <Router>
-      <Header toggleSidebar={toggleSidebar} numberCategory={handleCategoryChange} selectedOption={selectedOption} />
+    <>
+      {isAuthPage ? (
+        <Logo />
+      ) : (
+        <Header toggleSidebar={toggleSidebar} numberCategory={handleCategoryChange} selectedOption={selectedOption} />
+      )}
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} numberCategory={categoryNumber} />
       <Routes>
         <Route path="/" element={<Home categoryNumber={categoryNumber} toggleSidebarHome={toggleSidebarHome} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-    </Router>
+    </>
   );
 };
 
-export default App;
+const Root = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default Root;

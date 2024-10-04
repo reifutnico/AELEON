@@ -52,7 +52,10 @@ const Header = ({ toggleSidebar, numberCategory, selectedOption }) => {
           </ul>
         </nav>
         <div className="user-options">
-          <a href="#" className="login">LOG IN</a>
+        <Link to="/login" className="login">
+            LOG IN
+        </Link>
+
           <a href="#">
             <FontAwesomeIcon icon={faShoppingCart} />
           </a>
