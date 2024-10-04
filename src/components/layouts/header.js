@@ -1,5 +1,7 @@
 // src/components/Header/Header.js
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
 import '../../styles/header.css';  
 import logo from '../../img/LOGO_AELEON.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +9,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ toggleSidebar,numberCategory }) => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const navigate = useNavigate();
 
   const handleSelect = (value) => {
     setSelectedOption(value);
@@ -19,9 +22,9 @@ const Header = ({ toggleSidebar,numberCategory }) => {
     <div className="header-container">
       <header className="header">
         <div className="logo">
-          <a href="#">
-            <img src={logo} alt="Logo" />
-          </a>
+        <Link to="/">
+        <img src={logo} alt="Logo" />
+        </Link>
         </div>
         <nav>
           <ul className="nav-links">
@@ -62,7 +65,6 @@ const Header = ({ toggleSidebar,numberCategory }) => {
           </a>
         </div>
       </header>
-      {selectedOption && <p>Selected option: {selectedOption}</p>}
     </div>
   );
 };

@@ -21,7 +21,7 @@ const App = () => {
       <Header toggleSidebar={toggleSidebar} numberCategory={handleCategoryChange} />
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar}  numberCategory={categoryNumber}/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home categoryNumber={categoryNumber}/>} />
       </Routes>
     </Router>
   );
