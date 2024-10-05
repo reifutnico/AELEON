@@ -5,7 +5,7 @@ import CardProductList from '../listProducts/cardProductList';
 import model from '../../img/model.webp';
 import back from '../../img/modelBack.webp';
 
-const ProductList = () => {
+const ProductList = ({toggleSidebarList}) => {
   const productListData = [
     {
       id: 1,
@@ -29,9 +29,12 @@ const ProductList = () => {
       secondImage: back
     }
   ];
+  const handleClick = () => {
+    toggleSidebarList();  
+  };
 
   return (
-    <div className="product-list-container"> {/* Aplica la clase aquí */}
+    <div className="product-list-container" onClick={handleClick}>
       <h2>Lista de Productos</h2>
       <CardProductList products={productListData} />
     </div>

@@ -22,6 +22,11 @@ const App = () => {
     setIsSidebarOpen(false);
     setSelectedOption(null);  
   };
+  const toggleSidebarList = () => {
+    setIsSidebarOpen(false);
+    setSelectedOption(null);  
+
+  };
 
   const handleCategoryChange = (number) => {
     setCategoryNumber(number);
@@ -31,15 +36,23 @@ const App = () => {
   const location = useLocation(); 
 
   const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
+  const isProductListPage = location.pathname === '/productList'; // Nueva variable
 
-  // Efecto para cerrar el sidebar al ir a /login o /register
   useEffect(() => {
     if (isAuthPage) {
-      setIsSidebarOpen(false); // Cerrar el sidebar
+      setIsSidebarOpen(false); 
       setSelectedOption(null);  
-
     }
-  }, [location.pathname]); // Dependencia en la ruta
+  }, [location.pathname]);
+
+
+  useEffect(() => {
+    if (isProductListPage) {
+      setIsSidebarOpen(false); 
+    }
+  }, [location.pathname]);
+
+
 
   return (
     <>
@@ -53,7 +66,7 @@ const App = () => {
         <Route path="/" element={<Home categoryNumber={categoryNumber} toggleSidebarHome={toggleSidebarHome} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/productList" element={<ProductList />} />
+        <Route path="/productList" element={<ProductList  toggleSidebarList={toggleSidebarList}  />} />
 
       </Routes>
     </>
