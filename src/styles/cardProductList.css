@@ -10,7 +10,7 @@
   border-radius: 8px;
   padding: 24px; /* Aumenta el padding para darle más espacio */
   text-align: left; 
-  width: 350px; /* Aumenta el ancho de la tarjeta */
+  width: 300px; /* Aumenta el ancho de la tarjeta */
   display: flex;
   flex-direction: column;
   align-items: flex-start;

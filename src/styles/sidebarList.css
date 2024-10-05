@@ -1,0 +1,125 @@
+.sidebar-list {
+  width: 200px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.sidebar-list .button-filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar-list .filter-btn {
+  padding: 10px 10px;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-list .filter-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.sidebar-list .dropdown-filter {
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-list .dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-list .dropdown-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+}
+
+.sidebar-list .expand-icon {
+  font-size: 18px;
+  color: #999;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-list .expand-icon.open {
+  transform: rotate(180deg);
+}
+
+.sidebar-list .dropdown-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.sidebar-list .dropdown-content.open {
+  max-height: var(--content-height);
+}
+
+.sidebar-list .dropdown-options {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.sidebar-list .dropdown-options li {
+  margin-bottom: 10px;
+}
+
+.sidebar-list .checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  user-select: none;
+}
+
+.sidebar-list .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.sidebar-list .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.sidebar-list .checkbox-container:hover input ~ .checkmark {
+  border-color: #999;
+}
+
+.sidebar-list .checkbox-container input:checked ~ .checkmark {
+  background-color: #999;
+  border-color: #999;
+}
+
+.sidebar-list .checkmark svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  color: #fff;
+}
+
+.sidebar-list .checkbox-container input:checked ~ .checkmark svg {
+  display: block;
+}

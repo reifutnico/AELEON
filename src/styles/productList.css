@@ -1,14 +1,48 @@
+.product-page-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start; /* Cambia a flex-start para alinear elementos al inicio */
+}
+
+.sidebar-container {
+  width: 250px; /* Ancho deseado para el sidebar */
+  position: fixed; /* Fija el sidebar en su lugar */
+  top: 130px; /* Ajusta este valor según la altura de tu header */
+  left: 0;
+  height: calc(100vh - 60px); /* Resta la altura del header para que no lo cubra */
+  overflow-y: auto; /* Permite el scroll en el sidebar si su contenido es largo */
+  border-right: 1px solid #e0e0e0;
+  background-color: white; /* Color de fondo */
+  z-index: 1000; /* Asegura que el sidebar esté por encima del contenido */
+}
+
+.main-content {
+  flex-grow: 1; /* La parte principal crecerá para ocupar el espacio restante */
+  margin-left: 250px; /* Desplaza el contenido principal para no superponerse con el sidebar */
+  padding: 20px;
+  padding-top: 20px; /* Espaciado adicional en la parte superior si es necesario */
+}
+
 .product-list-container {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos en una columna */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    min-height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
-    padding: 20px; /* Espaciado alrededor del contenido */
-  }
-  
-  .card-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los productos se envuelvan en varias líneas */
-    justify-content: center; /* Centra los productos horizontalmente */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.product-card {
+  width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
