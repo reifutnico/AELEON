@@ -5,8 +5,8 @@ import DropdownFilter from '../listProducts/dropdownFilter';
 import '../../styles/sidebarList.css';
 
 const SidebarList = () => {
-    const buttonOptions = ['New', 'Sale', 'Trending', 'Clearance'];
-  
+  const buttonOptions = ['New', 'Sale', 'Trending', 'Clearance'];
+
   const filters = [
     { title: 'Category', options: ['Option 1', 'Option 2', 'Option 3'] },
     { title: 'Size', options: ['S', 'M', 'L', 'XL'] },
@@ -20,6 +20,10 @@ const SidebarList = () => {
       {filters.map((filter, index) => (
         <DropdownFilter key={index} title={filter.title} options={filter.options} />
       ))}
+
+      <button className="search-btn">Search</button>
+      <button className="search-btn">Clean</button>
+
     </div>
   );
 };
