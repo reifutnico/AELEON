@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 .header-container * {
@@ -10,10 +11,9 @@
 }
 
 .header {
-    
     background-color: #ffffff;
     display: flex;
-    justify-content: space-between; /* Espacio entre logo y user-options */
+    justify-content: space-between;
     align-items: center;
     height: 85px;
     padding: 5px 10%;
@@ -25,16 +25,22 @@
     width: auto;
 }
 
+/* Center the nav links */
+.header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .header .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 40px; /* Espaciado entre los elementos */
 }
 
 .header .nav-links li {
     display: inline-block;
+    margin: 0 20px;
 }
 
 .header .nav-links a {
@@ -49,10 +55,10 @@
     text-decoration-thickness: 2px;
 }
 
-/* Estilos para LOG IN y CEST alineados a la derecha */
+/* Adjust user options to maintain layout */
 .user-options {
     display: flex;
-    gap: 40px; /* Espaciado entre LOG IN y CEST */
+    gap: 40px;
 }
 
 .user-options a {
@@ -64,7 +70,6 @@
 .cart-icon {
     width: 20px;
     height: auto;
-    
 }
 
 .user-options a .fa-shopping-cart {

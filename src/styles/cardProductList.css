@@ -1,0 +1,43 @@
+/* Estilos para el contenedor de las tarjetas de producto */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Estilos para cada tarjeta */
+.card {
+  border-radius: 8px;
+  padding: 24px; /* Aumenta el padding para darle más espacio */
+  text-align: left; 
+  width: 350px; /* Aumenta el ancho de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Estilos para la imagen del producto */
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; 
+  border-radius: 0; 
+  margin-bottom: 16px; /* Más espacio entre la imagen y el título */
+}
+
+/* Estilos para el título del producto */
+.card h3 {
+  font-size: 20px; /* Aumenta el tamaño de la fuente del título */
+  margin: 0;
+  padding: 0;
+  width: 100%; 
+}
+
+/* Estilos para el precio del producto */
+.card p {
+  font-size: 24px; /* Aumenta el tamaño de la fuente del precio */
+  color: #333;
+  font-weight: bold;
+  margin-top: 12px; /* Un poco más de espacio entre el título y el precio */
+  width: 100%;
+}

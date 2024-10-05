@@ -1,0 +1,14 @@
+.product-list-container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    min-height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+    padding: 20px; /* Espaciado alrededor del contenido */
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los productos se envuelvan en varias líneas */
+    justify-content: center; /* Centra los productos horizontalmente */
+  }

@@ -1,5 +1,7 @@
 // src/components/Sidebar/Sidebar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import '../../styles/sidebar.css';  
 import logo from '../../img/LOGO_AE.png'; // Asegúrate de tener el logo disponible
 
@@ -15,6 +17,7 @@ const Sidebar = ({ isOpen, toggleSidebar, numberCategory}) => {
       </div>
       <nav className="sidebar-nav">
         <ul>
+        <li><Link to="/productList">PRODUCT LIST</Link></li>
           <li><a href="/best-sellers">BEST SELLERS</a></li>
           <li><a href="/jackets">JACKETS</a></li>
           <li><a href="/blazers">BLAZERS</a></li>

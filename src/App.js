@@ -7,6 +7,7 @@ import Logo from './components/layouts/logo'; // Importa el nuevo logo
 import Sidebar from './components/Sidebar/sidebar';
 import Login from './components/pages/login';
 import Register from './components/pages/register';
+import ProductList from './components/pages/productList';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -52,6 +53,8 @@ const App = () => {
         <Route path="/" element={<Home categoryNumber={categoryNumber} toggleSidebarHome={toggleSidebarHome} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/productList" element={<ProductList />} />
+
       </Routes>
     </>
   );
