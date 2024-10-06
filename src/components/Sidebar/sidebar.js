@@ -1,15 +1,14 @@
-// src/components/Sidebar/Sidebar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../../styles/sidebar.css';  
-import logo from '../../img/LOGO_AE.png'; // Asegúrate de tener el logo disponible
+import logo from '../../img/LOGO_AE.png'; 
 
 const Sidebar = ({ isOpen, toggleSidebar, numberCategory}) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
-      <h2 className="sidebar-title">WOMEN: {numberCategory}</h2> {/* Muestra el número de categoría aquí */}
+      <h2 className="sidebar-title">WOMEN: {numberCategory}</h2> 
       <img src={logo} alt="Logo" className="sidebar-logo" />
       </div>
       <div className="sidebar-new">

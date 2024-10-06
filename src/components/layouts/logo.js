@@ -1,20 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importa Link
-import logo from '../../img/LOGO_AELEON.png'; // Asegúrate de que la ruta sea correcta
-import '../../styles/header.css'; // Asegúrate de incluir los estilos para el logo
+import { Link } from 'react-router-dom'; 
+import logo from '../../img/LOGO_AELEON.png'; 
+import '../../styles/header.css';
 
 const Logo = () => {
   return (
     <div className="header-container">
 
-    <div className="header"> {/* Mantiene la misma clase que el Header */}
+    <div className="header">
       <div className="logo">
-        {/* Envuelve la imagen del logo en un Link */}
         <Link to="/">
           <img src={logo} alt="Logo" />
         </Link>
       </div>
-      {/* Espacio vacío para que ocupe el mismo espacio que el Header */}
       <nav style={{ display: 'none' }}>
         <ul className="nav-links">
           <li></li>

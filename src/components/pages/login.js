@@ -10,7 +10,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí manejas la lógica del login
   };
 
   return (

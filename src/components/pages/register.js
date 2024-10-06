@@ -10,9 +10,6 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí manejas la lógica del registro
-
-    // Simulando el envío de un correo electrónico
     setEmailSent(true);
   };
 
