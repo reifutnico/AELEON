@@ -9,7 +9,6 @@
     font-weight: 600; /* Semi Bold */
     font-size: 20px;
 }
-
 .header {
     background-color: #ffffff;
     display: flex;
@@ -17,7 +16,16 @@
     align-items: center;
     height: 85px;
     padding: 5px 10%;
-    position: relative;
+    position: fixed; /* Cambiado a fixed */
+    top: 0; /* Fija el header en la parte superior */
+    left: 0; /* Alinea el header al lado izquierdo */
+    right: 0; /* Alinea el header al lado derecho */
+    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
+}
+
+/* Ajustar el margen superior del contenido para evitar que quede oculto detrás del header */
+body {
+    padding-top: 85px; /* Ajusta este valor si cambias la altura del header */
 }
 
 .header .logo img {

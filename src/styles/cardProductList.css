@@ -22,7 +22,7 @@
   height: auto;
   object-fit: contain; 
   border-radius: 0; 
-  margin-bottom: 16px; /* Más espacio entre la imagen y el título */
+  margin-bottom: 10px; /* Más espacio entre la imagen y el título */
 }
 
 /* Estilos para el título del producto */
@@ -35,9 +35,9 @@
 
 /* Estilos para el precio del producto */
 .card p {
-  font-size: 24px; /* Aumenta el tamaño de la fuente del precio */
+  font-size: 20px; /* Aumenta el tamaño de la fuente del precio */
   color: #333;
   font-weight: bold;
-  margin-top: 12px; /* Un poco más de espacio entre el título y el precio */
+  margin-top: 4px; /* Un poco más de espacio entre el título y el precio */
   width: 100%;
 }
