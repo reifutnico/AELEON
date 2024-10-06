@@ -8,7 +8,7 @@ const CardProduct = ({ product }) => {
   const currentImage = isHovered ? product.secondImage : product.image;
 
   return (
-    <Link to={`/product`} className="card-link"> {/* Envolvemos todo el contenido en el Link */}
+    <Link to={`/product`} className="card-link"> 
       <div
         className="card"
         onMouseEnter={() => setIsHovered(true)}

@@ -41,3 +41,8 @@
   margin-top: 4px; /* Un poco más de espacio entre el título y el precio */
   width: 100%;
 }
+.card-link {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit; /* Usa el color del texto del elemento padre */
+  cursor: pointer; /* Mantiene el cursor como pointer para indicar interactividad */
+}
