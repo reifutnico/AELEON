@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar/sidebar';
 import Login from './components/pages/login';
 import Register from './components/pages/register';
 import ProductList from './components/pages/productList';
+import ProductPage from './components/pages/productPage';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -67,6 +68,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/productList" element={<ProductList  toggleSidebarList={toggleSidebarList}  />} />
+        <Route path="/product" element={<ProductPage />} />
 
       </Routes>
     </>
