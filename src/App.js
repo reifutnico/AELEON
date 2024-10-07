@@ -9,6 +9,7 @@ import Login from './components/pages/login';
 import Register from './components/pages/register';
 import ProductList from './components/pages/productList';
 import ProductPage from './components/pages/productPage';
+import Collection from './components/pages/collectionPage';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -69,6 +70,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/productList" element={<ProductList  toggleSidebarList={toggleSidebarList}  />} />
         <Route path="/product" element={<ProductPage />} />
+        <Route path="/collection" element={<Collection />} />
 
       </Routes>
     </>

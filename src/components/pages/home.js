@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/home.css';
+import { Link } from 'react-router-dom';
 
 import menVideo from '../../videos/MEN_MODELS_VIDEOS.mp4';
 import womenVideo from '../../videos/WOMEN_MODELS_VIDEOS.mp4';
@@ -74,8 +75,9 @@ const Home = ({ categoryNumber, toggleSidebarHome }) => {
         />
       )}
       <div className="category-display"></div>
+      <Link to="/collection">
       <button className="explore-button">Explore the collection</button>
-    </div>
+     </Link>    </div>
   );
 };
 
