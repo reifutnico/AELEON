@@ -40,6 +40,9 @@ const App = () => {
 
   const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
   const isProductListPage = location.pathname === '/productList'; // Nueva variable
+  const isHome = location.pathname === '/'; // Nueva variable
+  const isCart = location.pathname === '/cart'; // Nueva variable
+
 
   useEffect(() => {
     if (isAuthPage) {
@@ -52,9 +55,16 @@ const App = () => {
   useEffect(() => {
     if (isProductListPage) {
       setIsSidebarOpen(false); 
+      
     }
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (isCart || isHome) {
+      setIsSidebarOpen(false); 
+      setSelectedOption(null);  
+    }
+  }, [location.pathname]);
 
 
   return (

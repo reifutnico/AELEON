@@ -36,6 +36,7 @@ const ProductCarousel = () => {
   const handleClose = (index) => {
   };
 
+
   const settings = {
     dots: false,
     infinite: false,
