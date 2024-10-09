@@ -56,9 +56,9 @@ const Header = ({ toggleSidebar, numberCategory, selectedOption }) => {
             LOG IN
         </Link>
 
-          <a href="#">
-            <FontAwesomeIcon icon={faShoppingCart} />
-          </a>
+        <Link to="/cart" className="cart">
+          <FontAwesomeIcon icon={faShoppingCart} />
+        </Link>
         </div>
       </header>
     </div>

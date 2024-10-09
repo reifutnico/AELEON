@@ -72,7 +72,7 @@ const App = () => {
         <Route path="/productList" element={<ProductList  toggleSidebarList={toggleSidebarList}  />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/collection" element={<Collection />} />
-        <Route path="/cest" element={<Cest />} />
+        <Route path="/cart" element={<Cest />} />
 
       </Routes>
     </>

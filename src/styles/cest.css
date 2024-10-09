@@ -1,27 +1,38 @@
-.product-grid {
-  display: flex;
-  justify-content: center;
+.container { /* Asegúrate de tener un contenedor para el carrusel */
+  display: flex; /* o block */
+  justify-content: center; /* Esto ayudará a centrar el carrusel */
   align-items: center;
-  gap: 285px;
+}
+
+.product-carousel {
+  width: 100%;
+  max-width: 1800px; /* Adjust this value based on your layout needs */
+  margin: 2rem auto;
+  padding: 0; /* Add some padding on the sides */
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+
 }
 
 .product-card {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  position: relative;
+  width: 300px; /* Ajusta el ancho de cada tarjeta de producto */
+  flex-shrink: 0; /* Evita que las tarjetas se encojan dentro del carrusel */
 }
-
 .product-image-container {
   position: relative;
   width: 100%;
-  padding-top: 50%; /* Maintains image proportion */
-  background-color: rgb(224, 218, 218); /* Light grey background */
+  height: 80px;
+  padding-top: 60%; /* Maintains image proportion */
+  background-color: rgb(253, 250, 250); /* Light grey background */
 }
 
 .product-image {
   position: absolute;
-  top: 0;
+  top: -170px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -30,8 +41,9 @@
 
 .close-button {
   position: absolute;
-  top: 10px;
   right: 10px;
+  top: 20px;
+  z-index: 10;
   background: none;
   border: none;
   cursor: pointer;
@@ -47,23 +59,40 @@
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
-  margin-top: 10px;
 }
 
 .brand {
-  font-size: 14px;
-  margin: 0;
+  position: absolute;
+  bottom: -40px; /* Moved slightly up from the bottom */
+  left: 0;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: 400;
+
 }
 
 .name {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
   margin: 0;
+  padding: 5px;
+
 }
 
 .price {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0;
   text-align: right;
+  color: #000;
+}
+.trash-button {
+  bottom: 10px; 
+  right: 10px; 
+  background: none; 
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 }
