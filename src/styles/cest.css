@@ -1,16 +1,24 @@
-.container { /* Asegúrate de tener un contenedor para el carrusel */
-  display: flex; /* o block */
-  justify-content: center; /* Esto ayudará a centrar el carrusel */
+.container { 
+  display: flex; 
+  justify-content: center; 
   align-items: center;
+  width: 80%;
+  margin: auto;
 }
 
 .product-carousel {
   width: 100%;
-  max-width: 1800px; /* Adjust this value based on your layout needs */
+  max-width: 1800px;
   margin: 2rem auto;
-  padding: 0; /* Add some padding on the sides */
-  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+  padding: 0; 
+  overflow-x: hidden; 
+  
+}
 
+.slick-slide{
+  display: flex !important;
+  justify-content:center !important;
+  margin: auto !important
 }
 
 .product-card {
@@ -27,7 +35,7 @@
   width: 100%;
   height: 80px;
   padding-top: 60%; /* Maintains image proportion */
-  background-color: rgb(253, 250, 250); /* Light grey background */
+  background-color: rgb(253, 243, 243); /* Light grey background */
 }
 
 .product-image {
