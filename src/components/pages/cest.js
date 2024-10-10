@@ -77,6 +77,13 @@ const ProductCarousel = () => {
           <Trash2 size={24} color="red" /> 
         </button>
       </div>
+      <div class="full-width-rectangle">
+      <h3 className="text-rectangle">TOTAL $1250</h3>
+      <button className="full-width-button">
+      <h3 className="text-button">CONTINUE</h3>
+      </button>
+      </div>
+
     </div>
   );
 };
