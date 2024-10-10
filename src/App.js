@@ -11,6 +11,7 @@ import ProductList from './components/pages/productList';
 import ProductPage from './components/pages/productPage';
 import Collection from './components/pages/collectionPage';
 import Cest from './components/pages/cest';
+import Footer from './components/layouts/footer';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -83,8 +84,8 @@ const App = () => {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/cart" element={<Cest />} />
-
       </Routes>
+      {!isAuthPage && !isHome && <Footer />}
     </>
   );
 };
