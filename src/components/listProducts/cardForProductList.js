@@ -14,9 +14,9 @@ const CardProduct = ({ product }) => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <img src={currentImage} alt={product.title} />
-        <h3>{product.title}</h3>
-        <p>${product.price}</p>
+        <img src={currentImage} alt={product.nombre} />
+        <h3>{product.nombre}</h3>
+        <p>${product.precio}</p>
       </div>
     </Link>
   );
